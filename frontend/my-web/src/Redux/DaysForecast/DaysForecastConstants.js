@@ -1,0 +1,1 @@
+export const SET_DAYS_FORECAST = "SET_DAYS_FORECAST";

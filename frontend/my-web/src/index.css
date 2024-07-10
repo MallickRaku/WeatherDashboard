@@ -1,0 +1,77 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* @apply bg-gradient-to-r from-lightDarkModeBg to-darkerDarkModeBg; */
+  /* background-color: rgb(86, 84, 84); */
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.darkModeBg {
+  @apply bg-gradient-to-r from-lightDarkModeBg to-darkerDarkModeBg;
+}
+.lightModeBg {
+  @apply bg-gradient-to-r from-white to-lightDarkModeBg;
+}
+* {
+  @apply transition-all duration-100 ease-in-out;
+}
+
+.SearchComponent {
+  @apply flex justify-around items-center  py-5 gap-24;
+}
+
+input {
+  @apply bg-transparent w-full outline-none border-0 text-sm font-semibold;
+}
+.modeChangeParent {
+  @apply w-20 h-7 py-1 px-3 flex items-center rounded-xl bg-white text-center  transition-all duration-1000 ease-in-out;
+}
+
+.CityTimeComponent {
+  @apply px-28 flex flex-col gap-4 justify-center rounded-3xl;
+  box-shadow: 8px 8px rgb(42, 41, 41);
+}
+
+.CityWeatherComponent {
+  @apply flex justify-between gap-2   p-5 bottom-2 border-black rounded-3xl;
+  box-shadow: 8px 8px rgb(42, 41, 41);
+  /* bg-gradient-to-r from-darkerDarkModeBg to-lightDarkModeBg */
+}
+
+.ForecastComponent {
+  @apply p-4 w-fit rounded-3xl;
+  box-shadow: 8px 8px rgb(42, 41, 41);
+}
+
+.forecastItem {
+  @apply flex gap-8 font-semibold;
+}
+
+.HourForecastComponent {
+  @apply py-4 px-14 bottom-2 border-black rounded-3xl;
+  box-shadow: 8px 8px rgb(42, 41, 41);
+}
+
+.hourForecastItem {
+  @apply flex flex-col gap-1 font-semibold rounded-3xl py-2 px-5 text-center;
+  background-color: #373636;
+}

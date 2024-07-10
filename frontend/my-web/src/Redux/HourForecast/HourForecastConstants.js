@@ -1,0 +1,1 @@
+export const SET_HOUR_FORECAST = "SET_HOUR_FORECAST";
